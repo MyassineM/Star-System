@@ -437,7 +437,7 @@ m.sendMessage(args)
 client.on('ebnklb',function(ebnklb) {
     
     if(ebnklb.content.startsWith(`<@${client.user.id}>`)) {
-        ebnklb.channel.send('Hey Im **Sliver bot !**  A Nice Bot Developed By:`MHSTR`')
+        ebnklb.channel.send('Hey Im **Star bot !**  A Nice Bot Developed By:`Yas.sine`')
         ebnklb.channel.send('My Prefix `!`')
 
     }
@@ -477,6 +477,8 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
     let pages = [`
 ***__وصف عن البوت__***
 **
+Star يقدم لكم بوت
+افضل الميزات :heart:
 :gem:  البوت فيه كثير ميزات حلوة و جميلة
  ا:rocket: البوت يعمل 24 ساعه 
 بوت يمتلك مضد جحفله +سبام+نشر روابط+مضاد سب :gear: 
@@ -514,9 +516,6 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『!embed/يكرر الي تقولو بشكل حلو』
 『!discrim/كود يضهر لك الاشخاص نفس تاقك』
 『!emoji <any things>/لتحويل اي كلمه تقولها الي ايموجي』
-『!inv/لدعوة البوت الى سيرفرك』
-『!support/سيرفر الدعم』
-『!contact/ارسال اقتراح او لمراسلة صاحب البوت』
 **
   `
 ,`
@@ -1600,7 +1599,7 @@ return;
    if(!message.member.hasPermission('ADMINISTRATOR')) return;
             var bc = new Discord.RichEmbed()
             .addField('» السيرفر :', `${message.guild.name}`)
-            .addField('» المرسل : ', `${message.author.username}#${message.author.discriminator}`)
+        0    .addField('» المرسل : ', `${message.author.username}#${message.author.discriminator}`)
             .addField(' » الرسالة : ', args)
             .setColor('#ff0000')
             // m.send(`[${m}]`);
