@@ -98,13 +98,13 @@ message.channel.createWebhook(message.author.username, message.author.avatarURL)
      message.member.addRole(muterole);
     const embed500 = new Discord.RichEmbed()
       .setTitle("Muted Ads")
-            .addField(`**  You Have Been Muted **` , `**Reason : Sharing Another Discord Link**`)
+            .addField(`**  You Have Been Muted **` , `**Reason : Sharing Another Discord Link ; Arab Server, **`)
             .setColor("c91616")
             .setThumbnail(`${message.author.avatarURL}`)
             .setAuthor(message.author.username, message.author.avatarURL)
         .setFooter(`${message.guild.name} `)
      message.channel.send(embed500)
-     message.author.send('` انت معاقب ميوت شاتي بسبب نشر سرفرات ان كان عن طريق الخطا **ف** تكلم مع الادارة `');
+     message.author.send('` سيرفر عرب شوب  انت معاقب ميوت شاتي بسبب نشر سرفرات ان كان عن طريق الخطا **ف** تكلم مع الادارة `');
    
        
     }
@@ -335,7 +335,7 @@ coll.first().delete()
 client.on('ready', function(){
   client.user.setStatus("dnd");
     var ms = 40000 ;	
-    var setGame = ['!inv','!help'];	
+    var setGame = ['!help Arab Bot','!help Arab Bot'];	
     var i = -1;	
     var j = 0;	
     setInterval(function (){	
@@ -424,7 +424,7 @@ client.on('message' , message => {
   
 client.on('message', message => {
       if (!devs.includes(message.author.id)) return;
-  if (message.content.startsWith(adminprefix + 'sliver')) {
+  if (message.content.startsWith(adminprefix + 'arab')) {
     if (!devs.includes(message.author.id)) return; 
 let args = message.content.split(' ').slice(1).join(' ');
 
@@ -641,7 +641,7 @@ client.on('message', msg => {
     if(msg.member.hasPermission("MANAGE_MESSAGES")) {
     if (textxt == "") {
         msg.delete().then
-    msg.channel.send("***```Supply A Number 👌```***").then(m => m.delete(3000));
+    msg.channel.send("***```رقم ااي تبيه 👌```***").then(m => m.delete(3000));
 } else {
     msg.delete().then
     msg.delete().then
@@ -844,7 +844,7 @@ client.on('message', message => {
     
 if (message.content.startsWith(adminprefix + 'setgame')) {
   client.user.setGame(argresult);
-    message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
+    message.channel.sendMessage(`**${argresult}** تم تغيير بلاينق البوت إلى **`)
 } else 
   if (message.content.startsWith(adminprefix + 'setname')) {
 client.user.setUsername(argresult).then
@@ -1164,6 +1164,48 @@ reaction3.on("collect", r => {
 }
 });
 
+
+client.on('message', message => { // Toxic Codes
+    if (!message.content.startsWith(prefix)) return; // Toxic Codes
+  if(!message.channel.guild) return message.reply('** This command only for servers **') // Toxic Codes
+    let command = message.content.split(" ")[0]; // Toxic Codes
+    command = command.slice(prefix.length); // Toxic Codes
+    if (command === "!kill"){ // Toxic Codes
+
+   var sabotage = message.mentions.users.first();
+   if(sabotage == message.author)return message.reply(`**الانتحار مو زين و الله**`);// Toxic Codes
+    if(sabotage === client.user) return message.reply(`** تبي تقتلني ؟ **`);
+  if (sabotage < 1) {
+    message.delete();
+    return message.channel.sendMessage('ضع شيئا للقتل، مثل ذكر مستخدم، أو استخدام رمز تعبيري');// Toxic Codes
+  }
+  if (!sabotage) return message.channel.send(`Please Mention A Member to Kill :warning:`)// Toxic Codes
+  message.channel.send("▄︻̷̿┻̿═━一 ${sabotage")// Toxic Codes
+  .then(msg =>{
+  msg.edit(`▄︻̷̿┻̿═━一 ${sabotage} :three:`);// Toxic Codes
+  setTimeout(function() {
+    msg.edit(`▄︻̷̿┻̿═━一 ${sabotage} :two:`);// Toxic Codes
+  }, 1000);
+  setTimeout(function() {
+    msg.edit(`▄︻̷̿┻̿═━一 ${sabotage} :one:`);// Toxic Codes
+  }, 2000);// Toxic Codes
+  setTimeout(function() {
+    msg.edit(`▄︻̷̿┻̿═━一 :boom:`);// Toxic Codes
+  }, 3000);// Toxic Codes
+  setTimeout(function() {
+    msg.edit(`▄︻̷̿┻̿═━一 :fire:`);// Toxic Codes
+  }, 4000);
+  setTimeout(function() {
+    msg.edit(`▄︻̷̿┻̿═━一 :skull:`);// Toxic Codes
+  }, 5000);
+  msg.delete(6000)
+  message.delete()// Toxic Codes
+  })
+  message.channel.send("**تم اخفاء الجريمة بنجاح 🕳 **").then(msg => msg.delete(10000));// Toxic Codes
+    }
+});// Toxic Codes
+
+
  client.on('message', message => {
 	 var prefix ="!";
  if(message.content.startsWith(prefix +"server")){
@@ -1231,7 +1273,7 @@ var v1 = new Discord.RichEmbed()
   v1.setTimestamp(new Date())
   v1.setColor("#6a109d")
   v1.setDescription('***__ انتظر .. جاري الحصول علي البيانات __***')
-  v1.setFooter("# | Sliver TeaM |")
+  v1.setFooter("# | Arab TeaM |")
 var heroo = new Discord.RichEmbed()
 .setColor('#6a109d')
 .setTimestamp(new Date())
@@ -1949,7 +1991,7 @@ msg.channel.send(embed).then(() => {
   .setColor("04791c")
   .setDescription('**✅ |Good Job +1P**')
    .setFooter(`${collected.first().author}`)
-  message.channel.sendEmbed(sh);
+  message.4.sendEmbed(sh);
             let won = collected.first().author; // في هذا السطر يقوم الكود بسحب الأي دي الذي قام بالأجابة اولاً
             points[won.id].points++;
           })
@@ -2160,7 +2202,7 @@ client.on('message',function(message) {
 let args = message.content.split(" ").slice(1).join(" ");
 if(message.content.startsWith(prefix + "say")) {
 if(!args) return;
-message.channel.send(`**# ${args}**`); // محطوط # عشان محد يستخدم البوت لتبنيد / طرد احد من السيرفر
+message.channel.send(`** ${args}**`); // محطوط # عشان محد يستخدم البوت لتبنيد / طرد احد من السيرفر
 }
 });
 
@@ -2544,7 +2586,7 @@ client.on('message' , message => {
 var prefix = "!"
 
 if (message.author.bot) return;
-if (message.content.startsWith(prefix + "contact")) {
+if (message.content.startsWith(prefix + "contactnoo")) {
 if (!message.channel.guild) return;
 
 
